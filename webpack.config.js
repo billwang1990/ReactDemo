@@ -18,25 +18,29 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         hot: true,
-        inline: true,
-        progress: true
+        inline: true
     },
 
     module: {
-        preLoaders: [
-            {
-                test: /\.jsx?$/,
-                loaders: ['eslint'],
-                include: APP_PATH
-            }
-        ],
+        // rules: [
+        //     {
+        //         enforce: 'pre',
+        //         test: /\.jsx?$/,
+        //         loader: 'eslint-loader',
+        //         exclude: /(node_modules)/
+        //     }
+        // ],
         loaders: [
             {
                 test: /\.jsx?$/,
-                loaders: ['babel'],
-                include: APP_PATH
+                loaders: ['babel-loader'],
+                include: APP_PATH,
+                exclude: /(node_modules)/
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
     plugins: [
         new HtmlWebpackPlugin({
