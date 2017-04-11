@@ -1,3 +1,43 @@
 {
-  "extends": []
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "browser": true,
+    "expect": true,
+    "chai": true,
+    "mountNode": true
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "destructuring": true,
+    "defaultParams": true,
+    "jsx": true
+  },
+  "rules": {
+    "no-console": 2,
+    "no-var": 2,
+    "no-unused-vars": 1,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "jsx-quotes": [
+      2,
+      "prefer-single"
+    ]
+  }
 }
