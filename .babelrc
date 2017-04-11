@@ -1,0 +1,3 @@
+{
+  "presets": ["es2-15", "react"]
+}
