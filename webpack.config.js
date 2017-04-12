@@ -22,11 +22,16 @@ module.exports = {
     },
 
     module: {
-        loaders: [
+        rules: [
+            {
+                enforce: 'pre',
+                test: /\.jsx?$/,
+                loader: 'eslint-loader',
+                exclude: /(node_modules)/
+            },
             {
                 test: /\.jsx?$/,
-                loaders: ['babel-loader', 'eslint-loader'],
-                include: APP_PATH,
+                loaders: ['babel-loader'],
                 exclude: /(node_modules)/
             }
         ]

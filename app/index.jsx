@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Index extends React.Component {
+const { Component } = React;
+
+class Index extends Component {
     constructor(props) {
         super(props);
     }
